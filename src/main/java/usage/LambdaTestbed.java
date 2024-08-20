@@ -22,20 +22,20 @@ public class LambdaTestbed {
     int localVariable = 10;
     printInt(() -> 2 * localVariable); //Captures the variable
 //    new IntSupplier() {
-//      private final int closure = localVariable;
+//      private final int capture = localVariable;
 //      @Override
 //      public int getAsInt() {
-//        return 2 * closure;
+//        return 2 * capture;
 //      }
 //    };
 
 
     printInt(() -> instanceField); //Captures the instance
 //    new IntSupplier() {
-//      private final LambdaTestbed closure = LambdaTestbed.this;
+//      private final LambdaTestbed capture = LambdaTestbed.this;
 //      @Override
 //      public int getAsInt() {
-//        return closure.instanceField;
+//        return capture.instanceField;
 //      }
 //    };
 
