@@ -9,7 +9,7 @@ public class Consumers {
     Consumer<String> lambda = str -> System.out.println(str.toUpperCase());
 
     performSideEffect(lambda);
-//    chainConsumers();
+//    multipleConsumers();
   }
 
   private static void performSideEffect(Consumer<String> lambda) {
@@ -19,7 +19,7 @@ public class Consumers {
     lambda.accept(goodbye);
   }
 
-  private static void chainConsumers() {
+  private static void multipleConsumers() {
     Consumer<String> printUpperCase = str ->
         System.out.println(str.toUpperCase());
 

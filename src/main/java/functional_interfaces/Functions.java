@@ -6,7 +6,8 @@ import java.util.function.Function;
 
 public class Functions {
   public static void main(String[] args) {
-    Function<String, Integer> lambda = str -> str.replace(" ", "")
+    Function<String, Integer> lambda = str -> str
+        .replace(" ", "")
         .length();
 
     transformSomeValue(lambda);
@@ -35,6 +36,6 @@ public class Functions {
 
     String result2 = getLengthDoubled.andThen(repeatHashesSquared)
         .apply("5long");
-    System.out.println("Composed (after): " + result2 + " (length: " + result2.length() + ")");
+    System.out.println("And then (after): " + result2 + " (length: " + result2.length() + ")");
   }
 }

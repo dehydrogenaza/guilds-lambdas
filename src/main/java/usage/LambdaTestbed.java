@@ -18,6 +18,7 @@ public class LambdaTestbed {
 //      }
 //    };
 
+
     int localVariable = 10;
     printInt(() -> 2 * localVariable); //Captures the variable
 //    new IntSupplier() {
@@ -31,7 +32,7 @@ public class LambdaTestbed {
 
     printInt(() -> instanceField); //Captures the instance
 //    new IntSupplier() {
-//      private final usage.LambdaTestbed closure = usage.LambdaTestbed.this;
+//      private final LambdaTestbed closure = LambdaTestbed.this;
 //      @Override
 //      public int getAsInt() {
 //        return closure.instanceField;
