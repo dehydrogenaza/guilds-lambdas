@@ -3,13 +3,16 @@ package functional_interfaces;
 import java.util.function.Consumer;
 
 // Consumer - takes an argument and returns nothing (operates via side effects)
+
 public class Consumers {
   public static void main(String[] args) {
-    testConsumer(str -> System.out.println(str.toUpperCase()));
+    Consumer<String> lambda = str -> System.out.println(str.toUpperCase());
+
+    performSideEffect(lambda);
 //    chainConsumers();
   }
 
-  private static void testConsumer(Consumer<String> lambda) {
+  private static void performSideEffect(Consumer<String> lambda) {
     String hello = "Hello, World!";
     String goodbye = "Goodbye, World!";
     lambda.accept(hello);

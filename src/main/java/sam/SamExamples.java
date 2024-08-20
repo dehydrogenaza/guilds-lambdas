@@ -1,6 +1,6 @@
 package sam;
 
-public class SamTestbed {
+public class SamExamples {
   public static void main(String[] args) {
     System.out.println("\nAMAZING FUNCTIONS");
     beAmazed(seconds -> "- You've been amazed for " + seconds + " seconds!");

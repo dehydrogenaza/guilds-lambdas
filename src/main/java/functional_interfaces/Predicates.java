@@ -3,13 +3,14 @@ package functional_interfaces;
 import java.util.function.Predicate;
 
 // Predicate - takes an argument and returns a boolean
+
 public class Predicates {
   public static void main(String[] args) {
-    testPredicate(i -> i % 3 == 0);
-//    testShortCircuit();
+    checkConditions(i -> i % 3 == 0);
+//    shortCircuitLogicOperations();
   }
 
-  private static void testPredicate(Predicate<Integer> lambda) {
+  private static void checkConditions(Predicate<Integer> lambda) {
     System.out.println("\nBasic test:");
     for (int i = 1; i <= 15; i++) {
       if (lambda.test(i)) {
@@ -41,7 +42,7 @@ public class Predicates {
     }
   }
 
-  private static void testShortCircuit() {
+  private static void shortCircuitLogicOperations() {
     System.out.println("\nShort-circuiting OR/AND:\n");
     Predicate<Integer> firstCondition = n -> {
       System.out.println("Checking FIRST CONDITION");

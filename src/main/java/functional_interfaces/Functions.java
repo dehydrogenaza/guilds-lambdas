@@ -3,17 +3,17 @@ package functional_interfaces;
 import java.util.function.Function;
 
 // Function - takes an argument and returns a value (possibly of a different type)
+
 public class Functions {
   public static void main(String[] args) {
-    testFunctions(str -> str.replace(" ", "").length());
+    Function<String, Integer> lambda = str -> str.replace(" ", "")
+        .length();
 
-//    Function<String, Integer> getLengthWithoutSpaces = str -> str.replace(" ", "").length();
-//    testFunctions(getLengthWithoutSpaces);
-
+    transformSomeValue(lambda);
 //    chainFunctions();
   }
 
-  private static void testFunctions(Function<String, Integer> lambda) {
+  private static void transformSomeValue(Function<String, Integer> lambda) {
     String input = "Hello with spaces";
     System.out.println("Raw input length: " + input.length());
     System.out.println("Transformed length: " + lambda.apply(input));
